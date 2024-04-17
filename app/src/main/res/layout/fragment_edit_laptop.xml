@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NewNoteFragment"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/editLaptopHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="Редактировать ноутбук"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editLaptopModel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Название модели"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editLaptopHeading"
+            android:background="@drawable/border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/editLaptopManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Производитель"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editLaptopModel"
+            android:background="@drawable/border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/editLaptopCpu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Процессор"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editLaptopManufacturer"
+            android:background="@drawable/border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/editLaptopCpuManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Производитель процессора"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editLaptopCpu"
+            android:background="@drawable/border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/editLaptopRam"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="ОЗУ"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/editLaptopCpuManufacturer"
+            android:background="@drawable/border"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editLaptopFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:backgroundTint="@color/sky_blue"
+            android:tintMode="@color/white"
+            android:src="@drawable/baseline_done_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="editFab" />
+
+    </RelativeLayout>
+</layout>
