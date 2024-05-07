@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/addLaptopHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Информация"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/laptopModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Модель:"
+            android:layout_below="@id/head"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/laptopManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Производитель:"
+            android:layout_below="@id/laptopModel"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/laptopCpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="ЦП:"
+            android:layout_below="@id/laptopManufacturer"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/laptopCpuManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Производитель ЦП:"
+            android:layout_below="@id/laptopCpu"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/laptopRam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="ОЗУ:"
+            android:layout_below="@id/laptopCpuManufacturer"
+            android:layout_marginTop="16dp"
+            android:maxLines="1" />
+
+    </RelativeLayout>
+</layout>

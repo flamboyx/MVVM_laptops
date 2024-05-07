@@ -1,9 +1,9 @@
-package com.example.mvvmlaptops
+package com.example.mvvmlaptops.domain
 
-data class Laptop(
+class LaptopModel (
     val model: String,
     val manufacturer: String,
     val cpu: String,
     val cpuManufacturer: String,
-    val ram: String
-)
+    val ram: Int
+):java.io.Serializable
