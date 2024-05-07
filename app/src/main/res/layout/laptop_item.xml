@@ -3,48 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/white"
-    android:layout_marginBottom="10dp" >
+    app:cardBackgroundColor="#E6AFB0B3"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:baselineAligned="false"
-        android:orientation="vertical"
-        android:padding="6dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/LaptopModel"
+            android:id="@+id/tv_model"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
             android:text="Laptop"
-            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="#1E0B3C" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp" >
 
             <TextView
-                android:id="@+id/LaptopCpu"
+                android:id="@+id/tv_cpu"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_marginEnd="10dp"
                 android:text="CPU: "
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/LaptopRam"
+                android:id="@+id/tv_ram"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:text="RAM: "
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>
