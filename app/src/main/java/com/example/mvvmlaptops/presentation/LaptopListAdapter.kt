@@ -13,9 +13,9 @@ class LaptopListAdapter(var list: MutableList<LaptopModel>) :
     RecyclerView.Adapter<LaptopListAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val model: TextView = itemView.findViewById(R.id.LaptopModel)
-        val cpu: TextView = itemView.findViewById(R.id.LaptopCpu)
-        val ram: TextView = itemView.findViewById(R.id.LaptopRam)
+        val model: TextView = itemView.findViewById(R.id.laptopModel)
+        val cpu: TextView = itemView.findViewById(R.id.laptopCpu)
+        val ram: TextView = itemView.findViewById(R.id.laptopRam)
     }
 
     private var onClickListener: OnClickListener? = null
