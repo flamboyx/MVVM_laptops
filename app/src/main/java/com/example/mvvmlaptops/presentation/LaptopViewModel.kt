@@ -14,6 +14,7 @@ class LaptopViewModel : ViewModel() {
     val ramColor = MutableLiveData<String>(default)
     var filter = MANUFACTURER
     val newList = MutableLiveData<MutableList<LaptopModel>>()
+    private val originalList = MutableLiveData<List<LaptopModel>>()
 
     fun filterManufacturer() {
         filter = MANUFACTURER
@@ -51,7 +52,7 @@ class LaptopViewModel : ViewModel() {
     }
 
     fun search(text: String) {
-        newList.value = (newList.value?.filter { it.model.contains(text, ignoreCase = true) })?.toMutableList()
+        newList.value = (originalList.value?.filter { it.model.contains(text, ignoreCase = true) })?.toMutableList()
     }
 
     fun add(laptop: LaptopModel) {
@@ -62,6 +63,7 @@ class LaptopViewModel : ViewModel() {
 
     fun getAllLaptops() {
         viewModelScope.launch {
+            originalList.value = async { Dep.getRepository().getAllLaptops() }.await()
             newList.value = async { Dep.getRepository().getAllLaptops() }.await()
         }
     }

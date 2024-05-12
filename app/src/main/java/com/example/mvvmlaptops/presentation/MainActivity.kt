@@ -59,11 +59,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val text = s.toString()
-                if (text.isNotEmpty()) {
-                    if (tempText.length > text.length) viewModel.getAllLaptops()
-                    tempText = text
-                    viewModel.search(text)
-                } else viewModel.getAllLaptops()
+                viewModel.search(text)
             }
         })
 
@@ -80,9 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.newList.observe(this) {
-            if (adapter != null) {
-                adapter.list = it
-            }
+            adapter.list = it
             adapter.notifyDataSetChanged()
         }
 
