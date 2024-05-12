@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: LaptopListAdapter
     private lateinit var viewModel: LaptopViewModel
-    private var tempText = ""
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
